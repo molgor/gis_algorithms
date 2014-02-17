@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+
+
+\title{Empirical transformations in the Euclidean Plane}
+\author{ Juan M. Escamilla}
+\date{\today}
+
+\numberwithin{equation}{subsection}
+
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This is the documentation of the program {\tt cartesian2affine.py} a software written in Python that transforms coordinates defined in the cartesian plane to an affine plane. In order to achieve this, a set of {\em Ground Control Points} (cgp.txt) is needed. The program calculates the parameters needed to perform the affine transformation. 
+\end{abstract}
+
+\section{Affine transformations in the plane}
+Affine transformations are functions from the plane into the plane that preserves parallel lines. Thus, the equivalence relation of "{\em being parallel to... }" is invariant under these type of transformations (subset of {\bf $Hom(R^2,R^2)$}). Affine transformations can be seen as composition of {\em rotations, translations, scaling} and {\em shearing}. The general equations system for converting cartesian coordinates into affine coordinates is the following:
+\begin{equation}\label{eq1}
+%$$
+\begin{array}{lcl}
+X & = & a_0 + a_1x + a_2y \\
+Y  & = & b_0 + b_1x + b_2y 
+\end{array}
+%$$
+\end{equation}
+Where $X,Y$ are the affine coordinates and: 
+\begin{equation}\label{eq2}
+\begin{array}{ccc}
+a_0 = X_0 & a_1 = m_{x} Cos(\alpha) & a_2 = -m_{x}Sin(\alpha + \beta) \\
+b_0 = Y_0 & b_1 = m_{x}Sin(\alpha) & b_2 = m_{y}Cos(\alpha + \beta)
+\end{array}
+\end{equation}
+\section{Workflow of the program}
+In order to solve this linear and coupled system we need an extra constraint (linear equation with defined values).
+Either we use at least six linear equations or use the matrix representation of the matrix extended into a 3x3 matrix. 
+
+\subsection{Calculate the parameters with at least six GCP}
+As we can see in the equations above, six variables (parameters) are needed to construct an affine transformation. Given the fact that the system is linear (linear transformation) we need at least six linear equations to solve it: Three for X and three for Y.
+The use of the {\em Ground Control Points} gives constraints to the system and with these solves it.
+To estimate precise parameters it is convenient to use as much {\em control points} as possible. In this exercise the {\em Root Mean Square} error estimator was used as a measure of quality for the transformation.
+
+
+
+i.e.
+\begin{equation}\label{eq3}
+%$$
+\begin{array}{lcl}
+X_1 &=& a_0 + a_1x_1 + a_2x_1 \\
+X_2 &=& a_0 + a_1x_2 + a_2x_2 \\
+X_3 &=& a_0 + a_1x_3 + a_2x_3 \\
+\end{array}
+%$$
+\end{equation}
+\begin{center}
+$
+\left | \begin{array}{c}
+X_1 \\ X_2 \\ X_3
+\end{array} \right |
+$
+= 
+$
+\left | \begin{array}{ccc}
+1 & 1 & 1 \\
+x_1 & x_2 & x_3 \\
+y_1 & y_2 & y_3  
+\end{array} \right |
+$
+$
+\bullet
+\left | \begin{array}{c}
+a_0 \\ a_1 \\ a_2
+\end{array} \right | 
+$
+\end{center}
+The solution is the product of the inverse of the matrix by the vector $(X_1,X_2,X_3)$ \ref{eq1}
+ With this we obtain: ${a_0, a_1, a_2, b_0, b_1, b_2 }$. \\
+ Finally, for the conversion between these parameters into $\alpha, \beta, X_0, Y_0, m_x, m_y$ it is needed to solve the equations on \ref{eq2}.
+ $$
+ \begin{array}{ll}
+ X_0 = a_0 & Y_0 = b_0 \\
+ \end{array}
+ $$ 
+
+
+\subsection{Pseudocode}
+\begin{enumerate}
+\item Make 3-tuples of each pair of coordinates.
+\item For each tuple do:
+\item 	Matrix representation M of the system build onto a matrix data type
+\item 	find the inverse of M and 
+\item 	multiply M by the actual coordinates.
+\item 	convert the parameters
+\item 	return the result
+\end{enumerate}
+The program builds a parameter vector for every tuple. After that the RMS is calculated in order to find the best set of gcp.
+%\paragraph{Outline}
+%The remainder of this article is organized as follows.
+%Section~\ref{previous work} gives account of previous work.
+%Our new and exciting results are described in Section~\ref{results}.
+%Finally, Section~\ref{conclusions} gives the conclusions.
+%
+%\section{Previous work}\label{previous work}
+%A much longer \LaTeXe{} example was written by Gil~\cite{Gil:02}.
+%
+%\section{Results}\label{results}
+%In this section we describe the results.
+%
+%\section{Conclusions}\label{conclusions}
+%We worked hard, and achieved very little.
+%
+%\bibliographystyle{abbrv}
+%\bibliography{main}
+
+\end{document}
+This is never printed

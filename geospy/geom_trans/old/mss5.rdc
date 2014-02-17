@@ -1,0 +1,24 @@
+file format : IDRISI Raster A.1
+file title  : FCC från Landsat MSS-sensorn. Landskrona, Helsingborg, Söderåsen
+data type   : byte
+file type   : binary
+columns     : 512
+rows        : 512
+ref. system : plane
+ref. units  : m
+unit dist.  : 1.0000000
+min. X      : 0.0000000
+max. X      : 1.0000000
+min. Y      : 0.0000000
+max. Y      : 1.0000000
+pos'n error : unknown
+resolution  : unknown
+min. value  : 9
+max. value  : 255
+display min : 9
+display max : 255
+value units : unspecified
+value error : unknown
+flag value  : 0
+flag def'n  : none
+legend cats : 0

@@ -1,0 +1,23 @@
+\select@language {english}
+\contentsline {paragraph}{Spatially Explicit Models}{1}
+\contentsline {subsection}{\numberline {0.1}Cellular Automata}{1}
+\contentsline {subsubsection}{\numberline {0.1.1}one dimensional CA}{1}
+\contentsline {subsubsection}{\numberline {0.1.2}two dimensional CA}{1}
+\contentsline {subsection}{\numberline {0.2}Agent-Based Models}{1}
+\contentsline {subsubsection}{\numberline {0.2.1}}{1}
+\contentsline {subsubsection}{\numberline {0.2.2}interacting agents}{1}
+\contentsline {subsubsection}{\numberline {0.2.3}Modifying the environment}{1}
+\contentsline {subsection}{\numberline {0.3}Genetic algorithms}{1}
+\contentsline {subsubsection}{\numberline {0.3.1}rules, rules, rules ...}{1}
+\contentsline {subsubsection}{\numberline {0.3.2}The chromosome}{1}
+\contentsline {subsubsection}{\numberline {0.3.3}The fitness $f(x)$ function}{1}
+\contentsline {subsubsection}{\numberline {0.3.4}The population}{1}
+\contentsline {subsubsection}{\numberline {0.3.5}The reproduction}{1}
+\contentsline {paragraph}{Crossover}{1}
+\contentsline {subsubsection}{\numberline {0.3.6}The mutation}{1}
+\contentsline {section}{\numberline {1}Reviewed examples}{1}
+\contentsline {subsection}{\numberline {1.1}Axelrod }{1}
+\contentsline {subsection}{\numberline {1.2}Plant disturbances}{1}
+\contentsline {subsection}{\numberline {1.3}Prisionel Dilema}{1}
+\contentsline {section}{\hspace *{-\tocsep }Introduction}{1}
+\contentsfinish 

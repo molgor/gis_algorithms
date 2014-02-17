@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[round]{natbib}
+\title{Evolving agents in the space\\ The {\em in-silico} struggle for existence \\ {\tt Popular Science Review}}
+\author{Juan M. Escamilla M\'olgora}
+\date{January, 2014}
+\begin{document}
+\maketitle
+%\section{The life of {\tt object[999]}}
+%{\tt Object[999]}, also called $Obj$ was born on {\tt 1390005375} ( January 18, 2014 at 00:36:15 GMT approx.). Because he is son of  {\tt Object[761]} and {\tt Object[32]} of the past generation, he has inherited special features that make him unique. Nevertheless, as an object, he spends all his life looking for $something$, moving and transforming his world. 
+%
+%$Obj$ lives in the $discrete-flatland$. A world with just two dimensions and splitted into tiles, similar to a chess board. All the living-beings in $discrete-flatland$ can move forwards, towards and from left to right. The only possible move is one tile at a time, never a fraction of it.
+%
+%In this world there are two classes of $beings$ 
+Disregarding fundamentalist believes, evolution is a well established theory that describes how living beings in earth adapt to the always changing environment. Evolution has been sculpting lifeforms in Earth since the beginning of life itself; approximately 3.5 millions of years ago.
+Although this process is present everywhere, it wasn't until the beginning of the 20th century that evolution started to be studied in a scientific way. The foundation of the evolutionary biology was the development of the {\em Modern Evolutionary Synthesis}. A framework that merged three branches of biologic theories ( {\em Population dynamics, Genetics} and {\em Natural Selection}) into a unified theory that can explain how great and complex adaptations, like the human eye, could be generated without the need of an {\em intelligent design}. 
+
+
+\section{The fitness landscape}
+This synthesis can be understood using the {\em fitness landscape} metaphor. 
+Imagine a group of points distributed uniformly in the plane. These points represent members of a biologic population. The  space in which the plane lives is called adaptation space. Now, as a consequence of the thermodynamic laws, everything moves and changes. The plane starts to distort up and down creating valleys and summits. The points will tend to move to the highest part of the landscape but for some reason, there will be points that can go faster than other. The movement will never cease and could be that meanwhile one group of points are in the front of change, towards the highest summit, the others could be separated by a valley. This group now need to find another summit, different from the more $adapted$ group.
+
+
+\subsection{The explanation}
+In this metaphor, points are members of a biologic population. The landscape represents the changing environment in which species lives. It could be interpreted as the ecological niche.
+The summit represent the optimal conditions of the niche. Therefore, all members of the population would tend to go to that place but given the fact that there are not two individuals with exactly the same characteristics there would be points that will reach the summit faster than others. The force that leads the points to the summit is the {\em Natural Selection} and the efficiency of reaching the optimum point is called $fitness$. 
+
+\subsection{Inside the genes}
+A gene is an information entity that represent a protein, i.e a function or feature of a member in the population. Genes are passed from generation to generation but not always in an identical copy. Sometimes there are errors during the copying process and the sequence that codes for a certain protein changes a little, this is called $mutation$. The change can give better or worse $fitness$. Mutation is the main source of evolution because it induces variability in the population. It is the responsible of evolution, while {\em Natural Selection} constraints variability and adaptability. The collection of all different genes in an organism is called $genome$. The physical arrangement of genes in form of DNA is called $chromosomes$.
+
+\subsubsection{Crossover}
+In Eucaryotes (cells with nucleus) another process is performed during reproduction. The chromosomes joint together previously to the sexual division. During this joint some genes can jump from chromosome to chromosome. The process of building new genes during this process is called $crossover$. 
+
+
+While {\em Natural Selection} moves the population towards the summit, or optimal point. Mutation and crossover spread the population out of the optimal site. It is the synergy of these forces what sculptures the magnificent adaptations of organisms in Earth.
+
+\section{Application of Evolution in computer science}
+
+Several applications of biologic evolutionary processes have been used in computer science, specially in complex problems that need many constraints and are described as NP-Complete problems. The branch of computer sciences that has mimic several biologic processes is called {\em bio-inspired computing}. The evolutionary analogy has been used widely as a bio-inspired mechanism of finding optimal solutions to complex problems \footnote{The work of  \citet{mitchell_ga} is a good introduction to the topic.}. In this sense, points are abstractions of living beings, each one of these called $agent$. Each $agent$ has attributes and rules that determine how is going to react upon certain circumstances. At the beginning the $agents$ are silly, that means that are not capable of adapting easily. 
+They will explore the world until certain conditions are satisfied. After that, a fitness function will measure the adaptability of each $agent$. As in nature, the best adapted organisms will have higher probability of leave descendants for the next generation. A probability function, based on the fitness of each agent is calculated. For a given $agent$, if the probability is higher than certain threshold, {\em selective pressure}, the $agent$ will have descendant for the next generation. Although better fitted agents are more likely to be in the next generation, there is a positive (different from cero) probability of a bad fitted agent to be also in the next generation.
+
+\subsection{Crossing-over}
+After the selection of the agents is performed, a $crossover$ process is implemented. Each $agent$ has certain rules for sensing and transforming its environment. These rules are described in a binary form, a boolean function from the domain of the neighborhood to the set of actions in each cell,  just as a cellular automata. The rules are represented as binary strings called $chromosome$. The crossover between two agents is made by choosing randomly a position in each $cromosome$ and copying a part of one chromosome into the other starting from the random position. For example: Take agents $A$ and $B$. $A$'s chromosome is 0011000100 and $B$'s chromosome is 1111001110. Now, for the random position, suppose is 7. Therefore the crossed over chromosome between $A$ and $B$ will be: 001101110. This process will make that some rules will be preserved in the chromosome while others will be interchanged by others. The $crossover$ is not made on every agent, several implementations include a threshold.
+
+\subsection{Mutation}
+After the new generation of agents is created, either with a literal copy or with crossovers, the mutation process is executed. This process consist in randomly selecting a position in each chromosome and change the value from 0 to 1 or from 1 to 0, depending the case. There are many variations of this process, could be using a random threshold or with probability of no change. After that, the new generation of agents are released into the space where they will explore the world and start the whole process once again, only with better chances of good fitness.
+
+Eventually, because of the {\em selective pressure} agents are going to be more similar in characteristics and more efficient in solving the task assessed by the fitness function. A very specialized problem solving technique was been created without the need of a programmer or designer.
+
+\section{Use of evolving computation in GIS}
+Given the fact that agents move in an abstract space, it is straight forward to extend the space with the euclidean properties of distance, inner product (angles), extent and resolution. The problem to solve could be the best strategy in which an object can find something in the region, or which is the shortest path from point $A$ to point $B$, or even, which strategy, on average, can be the best for the traveller salesman problem. Depending on the problem, the agents could be designed as cars in a traffic network, people in a crowd, pedestrians, birds, trees, etc. The fitness function is going to be a measure of how the agents respond to different conditions and how the inner rules (strategy) is better or worse than others. The work of \citet{abm_prin_conc} is a very brief and concise way to start exploring the agent model field. For a better understanding of the methods, validation and further examples the book "{\em Geosimulation: Automata Based Model for urban phenomena} \citep{geosimulation}" is a must read recommendation.  
+
+ 
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+
+\end{document}

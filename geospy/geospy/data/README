@@ -1,0 +1,23 @@
+vector_algorithms.py
+
+   This is a program that given a list of nodes and a list of coordinates builds polygons and calculates areas, side function of a point, line intesections and point in polygon.
+The main function plots the polygons defined in the files coords.txt and polygon_oriented.txt. The program is interactive, whenever the user press a polygon the point in polygon function is executed for every polygon to determine in which polygon the point is.
+
+Dependencies:
+ Python 2.6.
+ Matplotlib
+ Random 
+
+Inner dependencies:
+ Uses the Node class definition inside dijisktra module (included).
+
+Based on the lecture of Lars Harrie and the book: GIS a computing perspective (Worboys, 2004).
+
+USAGE: python vector_algorithms.py
+
+------------------------------
+Author: Juan M. Escamilla M.
+molgor@gmail.com
+December, 2013 
+------------------------------
+

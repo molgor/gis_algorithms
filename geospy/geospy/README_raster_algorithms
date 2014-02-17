@@ -1,0 +1,84 @@
+----------------------------------------------------------------------
+raster_algorithm.py
+
+Author: Juan M. Escamilla M—lgora
+Completed: 5/2/2014
+
+-------
+Description
+	This program geocodes a landsat image into the RT90 geodetic
+referencing system using a set of ground control points (GCP)
+located in the file data/GCP.txt.
+
+The method, as described in the empirical_transformations.py
+, fits the best affine transformation parameters based
+on the "Least Squares methods" determined by the minimum Root 
+Mean Square Error.
+ 
+After this, the program defines the landsat image, given as 
+a binary file. The classes GeoImage and Pixel are used to give
+a better handling to the data (See code).
+
+Among the methods used are: display, that displays the images.
+    - nearestNeighborResampleFrom
+    - bilinearResampleFrom 
+    these methods perform the actual sampling.
+
+The steps defined in the exercise are documented as normal comments
+in the source code (raster_algorithms.py)    
+
+The program asks for a desired resolution between 50 and 100 and
+displays four images corresponding to the original, the nearest nei-
+ghbor sampling, the bilinear sampling and the differences.
+
+USAGE: 
+	python raster_algorithms.py
+ ---------------------------------------------------------------------
+ Answers to the questions
+ 
+ 1. Describe which method is best.
+ - Bilinear method is best because it uses the information of the nearby
+ cells, making a mean value based on the values of the neighborhood.
+ The Nearest neigbor method uses only the information of the closest pixel
+ this, when used with continuous variables could generate artifacts that
+ contrast with the image. The bilinear method generates a more smooth
+ image, compared with the nearest neighbor.
+ 
+ 2. How can the program be extended to perform cubic convolution ? 
+ - The cubic convolution, as seen in the interpolation lecture, requires 
+ the derivative function. Therefore it is necessary to obtain a partial 
+ derivative of fx (in the x axis) and fy (in the y axis). It is possible
+ to calculate the partial derivative of each axis by calculating the diffe-
+ rence between the values in one direction and the other. Therefore the kernel
+ needs to be changed for at least 4x4 cells. Adapting the program so that it
+ takes into consideration a bigger window is easy (solving the special cases on
+ the border) given these values of the 16 nearest cells, it is possible to 
+ calculate the convolution with the cubic formula defined in: 
+ ROBERT G. KEYS, 1981 "Cubic Convolution Interpolation for Digital Image 
+ Processing" on IEEE TRANSACTIONS ON ACOUSTICS, SPEECH, AND SIGNAL PROCESSING,
+ VOL. ASSP-29, NO. 6, DECEMBER 1981 
+ 
+ 3. Explain the visualization commands you used in Python
+ - The code for visualization is the following:
+----------------------------------------------
+# For opening the binary file and representing it as an image:
+ with open(PATH+LANDSAT,'rb') as fid:
+# "with" is a shortcut for opening it and close it properly, managing
+# raising possible exceptions by default. 
+    data = np.fromfile(fid,np.int8).reshape((512,512)).T
+# np is an alias for numpy module
+# np.int8 specifies that the binary data type is composed of
+# integer of size 8 bits, arraged in 512x512 rows and columns.
+# data is a matrix, we need to transpose it.
+
+# The matrix is that added to the attribute M of the geoimage instance. 
+ plt.imshow(self.M,cmap=cm.Greys,extent=[self.min[0],self.max[0],self.min[1],self.max[1]])
+# plots the matrix of the geoimage instance, cmap is a defined colormap (see matplotlib documentation)
+# and extent defines the extension of the x and y axis.
+---------------------------------------------
+
+This is everything.
+Good Luck!
+Juan.
+
+EOF

@@ -1,0 +1,9 @@
+empirical_transformations.py 
+It is a program that computes the affine parameters and make the respective change of coordinate from a set of control point.
+
+It also calculates the RMS to measure the error of the transformation.
+
+USAGE: python empirical_transformations.py
+For further information check the PDF file.
+Juan Escamilla
+19/12/2013

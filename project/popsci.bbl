@@ -1,0 +1,26 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Benenson and Torrens(2004)]{geosimulation}
+I.~Benenson and P.~Torrens.
+\newblock \emph{Geosimulation: Automata-based modeling of urban phenomena}.
+\newblock Wiley InterScience online books. Wiley, 2004.
+\newblock ISBN 9780470843499.
+
+\bibitem[Castle and Crooks(2006)]{abm_prin_conc}
+Christian Castle and Andrew Crooks.
+\newblock {Principles and Concepts of Agent-Based Modelling for Developing
+  Geospatial Simulations}.
+\newblock September 2006.
+
+\bibitem[Mitchell(1998)]{mitchell_ga}
+M.~Mitchell.
+\newblock \emph{An Introduction to Genetic Algorithms}.
+\newblock A Bradford book. MIT Press, 1998.
+\newblock ISBN 9780262631853.
+
+\end{thebibliography}

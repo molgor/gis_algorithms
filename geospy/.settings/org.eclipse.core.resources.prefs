@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
-encoding/dijkstra.py=utf-8
+encoding//geospy/dijkstra.py=utf-8
+encoding//geospy/empirical_transformations.py=utf-8
+encoding//geospy/raster_algorithms.py=utf-8
+encoding//geospy/vector_algorithms.py=utf-8
+encoding/landcover_change.py=utf-8

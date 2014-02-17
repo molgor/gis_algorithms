@@ -1,0 +1,69 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Adamatzky(1994)]{adamatzky1994}
+A.~Adamatzky.
+\newblock \emph{Identification Of Cellular Automata}.
+\newblock Taylor \& Francis Group, 1994.
+\newblock ISBN 9780748401727.
+
+\bibitem[Axelrod(1997)]{axelrod1997}
+R.M. Axelrod.
+\newblock \emph{The Complexity of Cooperation: Agent-based Models of
+  Competition and Collaboration}.
+\newblock Princeton studies in complexity. Princeton University Press, 1997.
+\newblock ISBN 9780691015675.
+
+\bibitem[Balzter et~al.(1998)Balzter, Braun, and Köhler]{Balzter1998}
+Heiko Balzter, Paul~W. Braun, and Wolfgang Köhler.
+\newblock Cellular automata models for vegetation dynamics.
+\newblock \emph{Ecological Modelling}, 107\penalty0 (2–3):\penalty0 113 --
+  125, 1998.
+
+\bibitem[Castle and Crooks(2006)]{abm_prin_conc}
+Christian Castle and Andrew Crooks.
+\newblock {Principles and Concepts of Agent-Based Modelling for Developing
+  Geospatial Simulations}.
+\newblock September 2006.
+
+\bibitem[Devaney(2003)]{devaney2003}
+R.L. Devaney.
+\newblock \emph{An Introduction to Chaotic Dynamical Systems}.
+\newblock Addison-Wesley studies in nonlinearity. Westview Press, 2003.
+\newblock ISBN 9780813340852.
+
+\bibitem[Dytham(1995)]{dytham1995}
+C.~Dytham.
+\newblock {The effect of habitat destruction pattern on species persistence: A
+  cellular model}.
+\newblock \emph{Oikos}, 74\penalty0 (2), 1995.
+
+\bibitem[Gardner(1971)]{gardner1971}
+M.~Gardner.
+\newblock On cellular automata, self-reproduction, the garden of eden and the
+  game life.
+\newblock \emph{Sci. Am.}, 224:\penalty0 112–117, 1971.
+
+\bibitem[Longley et~al.(2005)Longley, Goodchild, Maguire, and
+  Rhind]{longley2005}
+Paul~A. Longley, Michael~F. Goodchild, David~J. Maguire, and David~W. Rhind.
+\newblock \emph{{Geographic Information Systems and Science}}.
+\newblock John Wiley \& Sons, April 2005.
+\newblock ISBN 0470870001.
+
+\bibitem[Mitchell(1998)]{mitchell_ga}
+M.~Mitchell.
+\newblock \emph{An Introduction to Genetic Algorithms}.
+\newblock A Bradford book. MIT Press, 1998.
+\newblock ISBN 9780262631853.
+
+\bibitem[Wolfram(2002)]{wolfram02}
+Stephen Wolfram.
+\newblock \emph{A New Kind of Science}.
+\newblock Wolfram Media, January 2002.
+
+\end{thebibliography}
