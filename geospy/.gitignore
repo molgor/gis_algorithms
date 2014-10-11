@@ -1,0 +1,8 @@
+#Git ignore file
+empirical_transformations/
+
+geom_trans/
+
+.metadata/
+
+vector_algorithms/
